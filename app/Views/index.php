@@ -6,20 +6,16 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>users list</h1>
+    <h1>Users list</h1>
     <ul>
         <?php foreach ($users as $user){?>
             <li>
                 Nome: <?= $user['nome']?> <br>
                 CPF: <?= $user['cpf']?> <br>
-                Data de Nascimento: <?=(new DateTime($user['nasc']))->format('d/m/Y')?> <br>
+                Data de Nascimento: <?= $user['nasc']?> <br>
                 <button>
                     <a href="index.php?action=showUser&id=<?= $user['id']?>">
                         Ver detalhes
-                    </a>
-                <button>
-                    <a href="index.php?action=deleteUser&id=<?= $user['id']?>">
-                        excluir usuário
                     </a>
                 </button>
                 <hr>
@@ -27,5 +23,10 @@
             </li>
         <?php }?>
     </ul>
+    
+    <button>
+        <a href="app/views/cadUser.php">Cadastrar usuário</a>
+    </button>
+
 </body>
 </html>

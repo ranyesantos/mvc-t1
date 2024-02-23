@@ -22,6 +22,13 @@
             $user = $this->model->deleteUser($id);
         }
 
+        public function addUser($nome, $cpf, $nasc){
+            $user = $this->model->addUser($nome, $cpf, $nasc);
+        }
+
+        public function editUser($id, $nome, $cpf, $nasc){
+            $user = $this->model->editUser($id, $nome, $cpf, $nasc);
+        }
 
 
     }
